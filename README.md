@@ -34,7 +34,7 @@ kubectl delete pod loop
 # 8. Edycja manifestu (dodanie "sleep infinity" do komendy)
 nano loop.yaml
 ```
-piVersion: v1
+apiVersion: v1
 kind: Pod
 metadata:
   name: loop
@@ -42,7 +42,8 @@ spec:
   containers:
   - name: busybox
     image: busybox:1.36.1
-    command: ["sh", "-c", "for i in {1..5}; do echo \"$i - A piece of cake !\";>
+    command: ["sh", "-c", "for i in {1..5}; do echo \"$i - A piece of cake !\"; done; sleep infinity"]
+
 ```
 # 9. Ponowne utworzenie Poda po modyfikacji
 kubectl apply -f loop.yaml
