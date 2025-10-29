@@ -4,6 +4,7 @@ Lab4_Wojciech_Wojciechewicz
 nano loop.yaml
 
 # 2. Wklejenie definicji Poda
+```
 apiVersion: v1
 kind: Pod
 metadata:
@@ -14,7 +15,7 @@ spec:
   - name: busybox
     image: busybox:1.36.1
     command: ["sh", "-c", "for i in {1..5}; do echo \"$i - A piece of cake !\"; done"]
-
+```
 # 3. Utworzenie Poda na podstawie manifestu
 kubectl apply -f loop.yaml
 
@@ -32,7 +33,7 @@ kubectl delete pod loop
 
 # 8. Edycja manifestu (dodanie "sleep infinity" do komendy)
 nano loop.yaml
-
+```
 piVersion: v1
 kind: Pod
 metadata:
@@ -42,7 +43,7 @@ spec:
   - name: busybox
     image: busybox:1.36.1
     command: ["sh", "-c", "for i in {1..5}; do echo \"$i - A piece of cake !\";>
-
+```
 # 9. Ponowne utworzenie Poda po modyfikacji
 kubectl apply -f loop.yaml
 
