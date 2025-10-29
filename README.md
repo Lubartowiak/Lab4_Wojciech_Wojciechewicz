@@ -25,7 +25,7 @@ kubectl get pods
 # 5. Podgląd szczegółowych informacji o Podzie loop
 kubectl describe pod loop
 
-# 6. Sprawdzenie logów z kontenera w Podzie loop
+# 6. Wyświetlenie logów
 kubectl logs loop
 
 # 7. Usunięcie starego Poda
@@ -51,5 +51,5 @@ kubectl apply -f loop.yaml
 # 10. Sprawdzenie statusu po zmianach
 kubectl get pods
 
-# 11. Ponowne wyświetlenie logów, by upewnić się, że pętla działała
+# 11. Wyświetlenie logów
 kubectl logs loop
